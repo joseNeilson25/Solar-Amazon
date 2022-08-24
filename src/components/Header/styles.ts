@@ -17,6 +17,9 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: space-between;
   }
+  img{
+    width: 50px
+  }
 `;
 
 export const HeaderButtonsContainer = styled.div`
