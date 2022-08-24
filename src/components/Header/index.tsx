@@ -1,11 +1,12 @@
+import React from "react";
 import { HeaderContainer } from "./styles";
-import logoSolar from "../../assets/logo.png"
+import LogoSolar from "../../assets/solar.jpg";
 
 export function Header() {
     return(
         <HeaderContainer>
             <div className="container">
-                <img src={logoSolar} />
+                <img src={LogoSolar} />
             </div>
         </HeaderContainer>
     )
