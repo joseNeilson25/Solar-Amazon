@@ -1,6 +1,7 @@
 import { TitleText } from "../../../../components/Typography";
 import { ProdCard } from "../ProdCard";
 import { OurProdContainer, ProdList } from "./styles";
+import { coffees } from "../../../../data/coffees";
 
 export function OurProd(){
     return(
@@ -9,10 +10,9 @@ export function OurProd(){
                 Nossos produtos
             </TitleText>
             <ProdList>
-                <ProdCard />
-                <ProdCard />
-                <ProdCard />
-                <ProdCard />
+                    {coffees.map((coffee) => (
+                    <ProdCard key={coffee.id} coffee={coffee} />
+                ))}
             </ProdList>
         </OurProdContainer>
     )
