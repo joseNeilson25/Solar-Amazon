@@ -1,5 +1,4 @@
 import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from "./styles";
-import LogoSolar from "../../assets/solar.jpg";
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 
@@ -7,7 +6,7 @@ export function Header() {
     return(
         <HeaderContainer>
             <div className="container">
-                <img src={LogoSolar} alt="" />
+                <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQHZTkidZMRg5Q/company-logo_200_200/0/1646425129544?e=1669248000&v=beta&t=VZ7l7gWf7uc_lHpdN8lAwjazc4q9NI8ArH4X8uuHtTQ" alt="" />
                 <HeaderButtonsContainer>
                     <HeaderButton variant="purple">
                         <MapPin size={20} weight="fill" />

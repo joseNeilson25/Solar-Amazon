@@ -1,10 +1,19 @@
 import { TitleText } from "../../../../components/Typography";
-import { OurProdContainer } from "./styles";
+import { ProdCard } from "../ProdCard";
+import { OurProdContainer, ProdList } from "./styles";
 
 export function OurProd(){
     return(
-        <OurProdContainer>
-            <TitleText></TitleText>
+        <OurProdContainer className="container">
+            <TitleText size="l" color="subtitle">
+                Nossos produtos
+            </TitleText>
+            <ProdList>
+                <ProdCard />
+                <ProdCard />
+                <ProdCard />
+                <ProdCard />
+            </ProdList>
         </OurProdContainer>
     )
 }

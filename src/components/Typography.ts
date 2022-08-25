@@ -14,8 +14,8 @@ interface RegularTextProps {
 
 export const TitleText = styled.h1<TitleTextProps>`
   color: ${({ theme, color }) => theme.colors[`base-${color ?? "title"}`]};
-  font-size: ${({ theme, size }) =>
-    theme.textSizes[`title-title-${size ?? "m"}`]};
+  font-size: ${({ theme, size }) => 
+  theme.textSizes[`title-title-${size ?? "m"}`]};
   font-family: ${({ theme }) => theme.fonts.title};
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 800};
@@ -24,7 +24,7 @@ export const TitleText = styled.h1<TitleTextProps>`
 export const RegularText = styled.p<RegularTextProps>`
   color: ${({ theme, color }) => theme.colors[`base-${color ?? "text"}`]};
   font-size: ${({ theme, size }) =>
-    theme.textSizes[`text-regular-${size ?? "m"}`]};
+  theme.textSizes[`text-regular-${size ?? "m"}`]};
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 400};
 `;
