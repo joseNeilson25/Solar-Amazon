@@ -4,6 +4,7 @@ import { CompleteOrderFormContainer, FormSectionContainer } from "./styles";
 import { MapPinLine, CurrencyDollar } from "phosphor-react";
 import { AddressForm } from "./AddressForm";
 import { useTheme } from "styled-components";
+import { PaymentMethodOptions } from "./PaymentMethodOptions";
 
 export function CompleteOrderForm(){
     const { colors } = useTheme();
@@ -28,6 +29,7 @@ export function CompleteOrderForm(){
                 subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
                 icon={<CurrencyDollar color={colors["brand-purple"]} size={22} />}
                 />
+            <PaymentMethodOptions />
             </FormSectionContainer>
         </CompleteOrderFormContainer>
     )
