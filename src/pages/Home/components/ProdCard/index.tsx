@@ -31,14 +31,14 @@ export function ProdCard({coffee}: CoffeeProps){
       }
     
 
-    const { addProdToCart } = useCart();
+    const { addCoffeeToCart } = useCart();
 
     function handleAddToCart() {
       const coffeeToAdd = {
         ...coffee,
         quantity,
       };
-      addProdToCart(coffeeToAdd);
+      addCoffeeToCart(coffeeToAdd);
     }
 
     const formattedPrice = formatMoney(coffee.price);

@@ -20,7 +20,7 @@ export function OrderConfirmedPage() {
                     <OrderDetailsContainer>
                         <InfoWithIcon 
                             icon={<MapPin weight="fill" />}
-                            iconBg={colors["brand-purple"]}
+                            iconBg={colors["brand-purple'inherit'"]}
                             text={
                             <RegularText>
                                 Entrega em <strong> Caruaru PE</strong>
