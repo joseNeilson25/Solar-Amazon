@@ -9,21 +9,21 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #FAFAFA;
-    color: #574F4D;
+    background: ${({ theme }) => theme.colors["base-background"]};
+    color: ${({ theme }) => theme.colors["base-text"]};
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, textarea, button {
-    font-family: 'Roboto';
+    font-family: ${({ theme }) => theme.fonts.regular};
     font-weight: 400;
-    font-size: 'Baloo 2'
+    font-size: ${({ theme }) => theme.textSizes["text-regular-m"]}
   }
 
   button {
     cursor: pointer;
   }
-  
+
   a {
     text-decoration: none;
   }
@@ -37,5 +37,17 @@ export const GlobalStyle = createGlobalStyle`
   input[type="number"] {
     -moz-appearance: textfield;
   }
-  
+
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors["base-button"]}
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: ${({ theme }) => theme.colors["brand-purple"]}
+  }
 `;
