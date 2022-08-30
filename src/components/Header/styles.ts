@@ -33,7 +33,6 @@ interface HeaderButtonProps {
 }
 
 export const HeaderButton = styled.button<HeaderButtonProps>`
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +45,23 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
   position: relative;
   cursor: inherit;
 
+  span {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    top: calc(-1.25rem / 2);
+    right: calc(-1.25rem / 2);
+    color: ${({ theme }) => theme.colors["base-white"]};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
+  
   ${({ variant }) => css`
     background: ${({ theme }) => theme.colors[`brand-${variant}-light`]};
     color: ${({ theme }) => theme.colors[`brand-${variant}-dark`]};
@@ -53,7 +69,6 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
       background: ${({ theme }) => theme.colors[`brand-${variant}-dark`]};
     }
   `}
-  
   ${({ variant }) =>
     variant === "purple" &&
     css`
@@ -61,4 +76,4 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
         color: ${({ theme }) => theme.colors[`brand-${variant}`]};
       }
     `}
-`
+`;

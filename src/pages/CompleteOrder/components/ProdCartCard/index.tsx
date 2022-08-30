@@ -1,28 +1,55 @@
 import { Trash } from "phosphor-react";
 import { QuantityInput } from "../../../../components/QuantityInput";
 import { RegularText } from "../../../../components/Typography";
+import { CartItem } from "../../../../contexts/CartContext";
 import { ActionsContainer, ProdCartCardContainer, RemoveButton } from "./styles";
+import { formatMoney } from "../../../../utils/formatMoney";
+import { useCart } from "../../../../hooks/useCart";
 
-export function ProdCartCard(){
+interface ProdCartCardProps{
+    coffee: CartItem
+}
+
+export function ProdCartCard({coffee}: ProdCartCardProps){
+    const { changeCartItemQuantity, removeCartItem } = useCart();
+
+    function handleIncrease() {
+      changeCartItemQuantity(coffee.id, "increase");
+    }
+  
+    function handleDecrease() {
+      changeCartItemQuantity(coffee.id, "decrease");
+    }
+
+    function handleRemove() {
+        removeCartItem(coffee.id);
+      }
+
+    const coffeeTotal = coffee.price * coffee.quantity;
+
+    const formattedPrice = formatMoney(coffeeTotal);
+
     return(
     <ProdCartCardContainer>
         <div>
-            <img src="https://cdn.dribbble.com/users/239755/screenshots/2476419/media/12af6dbdc389c698bc59e404cb7305ed.png?compress=1&resize=400x300" alt="" />
+            <img src={`/coffees/${coffee.photo}`} />
             <div>
-                <RegularText color="subtitle">Expresso tradicional</RegularText>
+            <RegularText color="subtitle">{coffee.name}</RegularText>
                 <ActionsContainer>
-                    <QuantityInput quantity={0} onIncrease={function (): void {
-                        throw new Error("Function not implemented.");
-                    } } onDecrease={function (): void {
-                        throw new Error("Function not implemented.");
-                    } } />
-                    <RemoveButton>
+                <QuantityInput
+                    onIncrease={handleIncrease}
+                    onDecrease={handleDecrease}
+                    quantity={coffee.quantity}
+                    size="small"
+                    />
+                    <RemoveButton type="button" onClick={handleRemove}>
                         <Trash size={16} />
-                        remover
+                            REMOVER
                     </RemoveButton>
                 </ActionsContainer>
             </div>
         </div>
+        <p>R$ {formattedPrice}</p>
     </ProdCartCardContainer>
     )
 }
