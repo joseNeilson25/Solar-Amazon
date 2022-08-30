@@ -3,7 +3,6 @@ import { OrderConfirmedContainer, OrderDetailsContainer } from "./style";
 import { useTheme } from "styled-components";
 import { Clock, CurrencyDollar, MapPin } from "phosphor-react";
 import { InfoWithIcon } from "../CompleteOrder/components/InfoWithIcon";
-import confirmedOrderIllustration from "../../assets/confirmed-order.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { OrderData } from "../CompleteOrder";
 import { paymentMethods } from "../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions";
@@ -75,7 +74,6 @@ export function OrderConfirmedPage() {
             }
           />
         </OrderDetailsContainer>
-        <img src={confirmedOrderIllustration} />
       </section>
     </OrderConfirmedContainer>
   );
