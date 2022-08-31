@@ -1,7 +1,7 @@
 export const coffees = [
     {
       id: 1,
-      tags: ["tradicional"],
+      tags: ["Tradicional "],
       name: "Expresso Tradicional",
       description: "O tradicional café feito com água quente e grãos moídos",
       photo: "tradicional.png",
@@ -9,7 +9,7 @@ export const coffees = [
     },
     {
       id: 2,
-      tags: ["tradicional"],
+      tags: ["Tradicional "],
       name: "Expresso Americano",
       description: "Expresso diluído, menos intenso que o tradicional",
       photo: "americano.png",
@@ -17,7 +17,7 @@ export const coffees = [
     },
     {
       id: 3,
-      tags: ["tradicional"],
+      tags: ["Tradicional "],
       name: "Expresso Cremoso",
       description: "Café expresso tradicional com espuma cremosa",
       photo: "cremoso.png",
@@ -25,7 +25,7 @@ export const coffees = [
     },
     {
       id: 4,
-      tags: ["tradicional", "gelado"],
+      tags: ["Tradicional ", "gelado"],
       name: "Expresso Gelado",
       description: "Bebida preparada com café expresso e cubos de gelo",
       photo: "gelado.png",
@@ -33,7 +33,7 @@ export const coffees = [
     },
     {
       id: 5,
-      tags: ["tradicional", "com leite"],
+      tags: ["Tradicional ", "com leite"],
       name: "Café com Leite",
       description: "Meio a meio de expresso tradicional com leite vaporizado",
       photo: "leite.png",
@@ -41,7 +41,7 @@ export const coffees = [
     },
     {
       id: 6,
-      tags: ["tradicional", "com leite"],
+      tags: ["Tradicional ", "com leite"],
       name: "Latte",
       description:
         "Uma dose de café expresso com o dobro de leite e espuma cremosa",
@@ -50,7 +50,7 @@ export const coffees = [
     },
     {
       id: 7,
-      tags: ["tradicional", "com leite"],
+      tags: ["Tradicional ", "com leite"],
       name: "Capuccino",
       description:
         "Bebida com canela feita de doses iguais de café, leite e espuma",
@@ -59,7 +59,7 @@ export const coffees = [
     },
     {
       id: 8,
-      tags: ["tradicional", "com leite"],
+      tags: ["Tradicional ", "com leite"],
       name: "Macchiato",
       description:
         "Café expresso misturado com um pouco de leite quente e espuma",
@@ -68,7 +68,7 @@ export const coffees = [
     },
     {
       id: 9,
-      tags: ["tradicional", "com leite"],
+      tags: ["Tradicional ", "com leite"],
       name: "Mocaccino",
       description: "Café expresso com calda de chocolate, pouco leite e espuma",
       photo: "mocaccino.png",
@@ -76,7 +76,7 @@ export const coffees = [
     },
     {
       id: 10,
-      tags: ["especial", "com leite"],
+      tags: ["Especial ", "com leite"],
       name: "Chocolate Quente",
       description: "Bebida feita com chocolate dissolvido no leite quente e café",
       photo: "chocolate.png",
@@ -84,7 +84,7 @@ export const coffees = [
     },
     {
       id: 11,
-      tags: ["especial", "alcoólico", "gelado"],
+      tags: ["Especial ", "alcoólico ", "gelado"],
       name: "Cubano",
       description:
         "Drink gelado de café expresso com rum, creme de leite e hortelã",
@@ -93,7 +93,7 @@ export const coffees = [
     },
     {
       id: 12,
-      tags: ["especial"],
+      tags: ["Especial "],
       name: "Havaiano",
       description: "Bebida adocicada preparada com café e leite de coco",
       photo: "havaiano.png",
@@ -101,7 +101,7 @@ export const coffees = [
     },
     {
       id: 13,
-      tags: ["especial"],
+      tags: ["Especial "],
       name: "Árabe",
       description: "Bebida preparada com grãos de café árabe e especiarias",
       photo: "arabe.png",
@@ -109,7 +109,7 @@ export const coffees = [
     },
     {
       id: 14,
-      tags: ["especial", "alcoólico"],
+      tags: ["Especial ", "alcoólico"],
       name: "Irlandês",
       description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
       photo: "irlandes.png",
