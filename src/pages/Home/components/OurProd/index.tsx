@@ -14,7 +14,6 @@ export function OurProd(){
                 Nossos produtos
             </TitleText>
             <select onChange={(ev) => setBusca(ev.target.value)}>
-                    <option value="">Todos</option>
                     <option value="Tradicional ">Tradicional</option>
                     <option value="com leite">com leite</option>
                     <option value="Especial ">Especial</option>
