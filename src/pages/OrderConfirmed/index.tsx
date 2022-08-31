@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { OrderData } from "../CompleteOrder";
 import { paymentMethods } from "../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions";
 import { useEffect } from "react";
+import { SelectedProd } from "./components/SelectedProd";
 
 interface LocationType {
   state: OrderData;
@@ -75,6 +76,7 @@ export function OrderConfirmedPage() {
           />
         </OrderDetailsContainer>
       </section>
+      <SelectedProd />
     </OrderConfirmedContainer>
   );
 }
