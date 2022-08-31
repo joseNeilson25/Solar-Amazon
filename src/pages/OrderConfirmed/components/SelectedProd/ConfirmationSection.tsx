@@ -2,6 +2,8 @@ import { RegularText } from "../../../../components/Typography"
 import {ConfirmationSectionContainer} from "./styles"
 import { useCart } from "../../../../hooks/useCart";
 import { formatMoney } from "../../../../utils/formatMoney";
+import { Button } from "../../../../components/Button";
+import { NavLink } from "react-router-dom";
 
 const DELIVERY_PRICE = 3.5;
 
@@ -12,6 +14,12 @@ export function ConfirmationSection() {
     const formattedItemsTotal = formatMoney(cartItemsTotal);
     const formattedCartTotal = formatMoney(cartTotal);
     const formattedDeliveryPrice = formatMoney(DELIVERY_PRICE);
+
+    const { cleanCart } = useCart();
+  
+    function limparcarrinho() {
+      cleanCart();
+    }
 
     return(
         <ConfirmationSectionContainer>
@@ -31,7 +39,11 @@ export function ConfirmationSection() {
             R$ {formattedCartTotal}
           </RegularText>
         </div>
-
+        <NavLink to="/">
+          <Button 
+            onClick={limparcarrinho} text={"Finalizar"} 
+              />
+        </NavLink>
         </ConfirmationSectionContainer>
     )
 }

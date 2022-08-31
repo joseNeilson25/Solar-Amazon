@@ -14,6 +14,7 @@ interface LocationType {
 }
 
 export function OrderConfirmedPage() {
+
   const { colors } = useTheme();
 
   const { state } = useLocation() as unknown as LocationType;
@@ -27,7 +28,8 @@ export function OrderConfirmedPage() {
   }, []);
 
   if (!state) return <></>;
-
+  
+  
   return (
     <OrderConfirmedContainer className="container">
       <div>

@@ -43,13 +43,11 @@ export function CompleteOrderPage() {
   const { handleSubmit } = confirmOrderForm;
 
   const navigate = useNavigate();
-  const { cleanCart } = useCart();
 
   function handleConfirmOrder(data: ConfirmOrderFormData) {
     navigate("/orderConfirmed", {
       state: data,
     });
-    cleanCart();
   }
 
   return (
