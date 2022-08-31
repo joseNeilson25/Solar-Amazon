@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const OrderConfirmedContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2.5rem;
   margin-top: 5rem;
   h1 {

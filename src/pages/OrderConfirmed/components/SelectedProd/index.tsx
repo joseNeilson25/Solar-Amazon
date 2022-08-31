@@ -1,6 +1,6 @@
 import { TitleText } from "../../../../components/Typography";
 import { useCart } from "../../../../hooks/useCart";
-import { ProdCartCard } from "../../../CompleteOrder/components/ProdCartCard";
+import { ProdCartCard } from "../ProdCartCard";
 import { ConfirmationSection } from "./ConfirmationSection";
 import { DetailsContainer, SelectedProdContainer } from "./styles";
 
