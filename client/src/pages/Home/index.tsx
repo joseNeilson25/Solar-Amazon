@@ -1,4 +1,5 @@
 // import { Intro } from "./components/Intro";
+import ListarCarros from "../../components/listaCarro";
 import { OurProd } from "./components/OurProd";
 import { HomeContainer } from "./styles";
 
@@ -8,6 +9,7 @@ export function HomePage(){
         <HomeContainer>
             {/* <Intro /> */}
             <OurProd />
+            <ListarCarros />
         </HomeContainer>
     )
 }
