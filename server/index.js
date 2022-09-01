@@ -1,6 +1,5 @@
 var coffees ='['+
   '{"id": 1, "tags": "honda", "name": "Expresso Tradicional", "description": "O tradicional café feito com água quente e grãos moídos", "photo": "tradicional.png", "price": "9.9"},'+
-  '{"id": 2, "marca": "fiat", "modelo": "uno"}' +
   ']';
 
 
