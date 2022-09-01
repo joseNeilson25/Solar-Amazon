@@ -4,22 +4,22 @@ import axios from 'axios'
 export default class ListaCarros extends React.Component{
 
     state={
-        carros:[]
+        coffees:[]
     }
 
     componentDidMount(){
         axios.get('http://localhost:3001/')
             .then(res=>{
-                const dadosCarros=res.data
-                this.setState({carros:dadosCarros})
+                const dadosCoffees=res.data
+                this.setState({coffees:dadosCoffees})
             })
     }
 
     render(){
         return (
                 <div>
-                    {this.state.carros.map(
-                        carro=> <div key={carro.id}>-{carro.name}-{carro.description}-{carro.photo}-{carro.price}</div>
+                    {this.state.coffees.map(
+                        coffees=> <div key={coffees.id}>-{coffees.name}-{coffees.description}-{coffees.photo}-{coffees.price}</div>
                     )}
                 </div>
         )
