@@ -18,7 +18,7 @@ export default class ListaCarros extends React.Component{
     render(){
         return (
                 <div>
-                    {this.state.coffees.map(
+                    {this.state.coffees || this.state.coffees.map(
                         coffees=> <div key={coffees.id}>-{coffees.name}-{coffees.description}-{coffees.photo}-{coffees.price}</div>
                     )}
                 </div>
