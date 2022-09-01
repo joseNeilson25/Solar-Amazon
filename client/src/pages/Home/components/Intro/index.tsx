@@ -1,3 +1,4 @@
+import ListaCarros from "../../../../components/listaCarro";
 import {IntroContainer, IntroContent} from "./styles";
 
   export function Intro() {
@@ -8,6 +9,7 @@ import {IntroContainer, IntroContent} from "./styles";
           <div>
             
           </div>
+          <ListaCarros />
         </IntroContent>
       </IntroContainer>
       );
