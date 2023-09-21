@@ -4,25 +4,26 @@ import { OurProdContainer, ProdList } from "./styles";
 import { coffees } from "../../../../data/coffees";
 import { useState } from "react";
 
-export function OurProd(){
-    const [busca, setBusca] = useState('')
-    const coffeesFiltrados = coffees.filter((coffees) => coffees.tags.includes(busca))
+export function OurProd() {
+    const [busca, setBusca] = useState('');
+    const coffeesFiltrados = busca === '' ? coffees : coffees.filter((coffee) => coffee.tags.includes(busca));
 
-    return(
+    return (
         <OurProdContainer className="container">
             <TitleText size="l" color="subtitle">
                 Nossos produtos
             </TitleText>
             <select onChange={(ev) => setBusca(ev.target.value)}>
-                    <option value="Tradicional ">Tradicional</option>
-                    <option value="com leite">com leite</option>
-                    <option value="Especial ">Especial</option>
-                </select>
+                <option value="">Mostrar Todos</option>
+                <option value="Tradicional ">Tradicional</option>
+                <option value="com leite">com leite</option>
+                <option value="Especial ">Especial</option>
+            </select>
             <ProdList>
-                            {coffeesFiltrados.map((coffee) => (
-                            <ProdCard key={coffee.id} coffee={coffee} />
-                        ))} 
+                {coffeesFiltrados.map((coffee) => (
+                    <ProdCard key={coffee.id} coffee={coffee} />
+                ))}
             </ProdList>
         </OurProdContainer>
-    )
+    );
 }
